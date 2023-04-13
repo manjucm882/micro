@@ -1,8 +1,11 @@
 from django.db import models
-from order.models import Order
 
 # Create your models here.
 
-class Payment(models.Model):
-    order = models.ForeignKey(Order,on_delete=models.CASCADE)
-    amount = models.IntegerField()
+class User(models.Model):
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    email = models.EmailField(unique=True)
+
+
+

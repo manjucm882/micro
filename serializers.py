@@ -1,10 +1,7 @@
 from rest_framework import serializers
-from .models import Payment
-from order.serializers import OrderSerializer
+from .models import User
 
-class PaymentSerializer(serializers.ModelSerializer):
-    order = OrderSerializer()
-
+class UserSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Payment
+        model = User
         fields = '__all__'
